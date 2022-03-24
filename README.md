@@ -1,2 +1,3 @@
 # timmytheman123.github.io
-hello this is a test
+this is just a fixed version of the glixzzy gui for the blooket utility
+(incomplete)
