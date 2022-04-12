@@ -2,8 +2,8 @@
 	"title": "Glixzzy Scripts",
 	"description": "Add Glixzzy's scripts to the GUI.",
 	"author": "Timmytheman123",
-	"url": "https://raw.githubusercontent.com/timmytheman123/timmytheman123.github.io/main/glixzzy/gui.js",
+	"url": "https://raw.githubusercontent.com/timmytheman123/timmytheman123-testing/main/glixzzy/injectable.json",
 	"scripts": [
-		"https://timmytheman123.github.io/"
+		"https://raw.githubusercontent.com/timmytheman123/timmytheman123-testing/main/glixzzy/gui.js"
 	]
 }
