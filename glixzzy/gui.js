@@ -1,45 +1,229 @@
-(async() => {
-	await ModMenu.init();
-	ModMenu.menu.arr.push(new ModMenu.MenuTree('glixzzy', [
-		new ModMenu.MenuTree('Cafe', [
-			new ModMenu.MenuButton('Get Coins', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Cafe/Get-Coins.js").then((res) => res.text().then((t) => eval(t)))),
-			new ModMenu.MenuButton('Infinite Food Level', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Cafe/Infinite-Food-Level.js").then((res) => res.text().then((t) => eval(t)))),
-			new ModMenu.MenuButton('Stock Infinite Food', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Cafe/Stock-Infinite-Food.js").then((res) => res.text().then((t) => eval(t)))),
-		]),
-		new ModMenu.MenuTree('Crypto', [
-			new ModMenu.MenuButton('Get Crypto', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Crypto-Hack/Get-Crypto.js").then((res) => res.text().then((t) => eval(t)))),
-			new ModMenu.MenuButton('Hack Other Users Password', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Crypto-Hack/Get-Other-Users-Password.js").then((res) => res.text().then((t) => eval(t)))),
-		]),
-		new ModMenu.MenuTree('Factory', [
-			new ModMenu.MenuButton('Get Cash', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Factory/Get-Cash.js").then((res) => res.text().then((t) => eval(t)))),
-			new ModMenu.MenuButton('Get Mega Bot', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Factory/Get-Mega-Bot.js").then((res) => res.text().then((t) => eval(t)))),
-		]),
-		new ModMenu.MenuTree('Fishing Frenzy', [
-			new ModMenu.MenuButton('Set Weight', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Fishing-Frenzy/Set-Weight.js").then((res) => res.text().then((t) => eval(t)))),
-		]),
-		new ModMenu.MenuTree('Global', [
-			new ModMenu.MenuButton('Add Tokens', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Global/Add-Tokens.js").then((res) => res.text().then((t) => eval(t)))),
-			new.ModMenu.MenuButon('Get All Blooks In The Game', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Global/Get-All-Blooks-In-Game.js").then((res) => res.text().then((t) => eval(t)))),
-      			new ModMenu.MenuButton('Get Every Answer Correct', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Global/Get-All-Answers-Correct.js").then((res) => res.text().then((t) => eval(t)))),
-			new ModMenu.MenuButton('Sell Duplicate Blooks', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Global/Sell-Dupe-Blooks.js").then.((res) => res.text().then((t) => eval(t)))),
-      			new ModMenu.MenuButton('Spam Open Boxes', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Global/Spam-Open-Boxes.js").then((res) => res.text().then((t) => eval(t)))),
-		]),
-		new ModMenu.MenuTree('Gold', [
-			new ModMenu.MenuButton('Get Gold', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Gold-Quest/Get-Gold.js").then((res) => res.text().then((t) => eval(t)))),
-			new ModMenu.MenuButton('Chest ESP', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Gold-Quest/Chest-ESP.js").then((res) => res.text().then((t) => eval(t)))),
-		]),
-		new ModMenu.MenuTree('Racing', [
-			new ModMenu.MenuButton('Instant Win', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Racing/Instant-Win.js").then((res) => res.text().then((t) => eval(t)))),
-		]),
-		new ModMenu.MenuTree('Tower Defense', [
-			new ModMenu.MenuButton('Change Game Round', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Tower-Defense/Change-Game-Round.js").then((res) => res.text().then((t) => eval(t)))),
-			new ModMenu.MenuButton('Get Cash', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Tower-Defense/Get-Cash.js").then((res) => res.text().then((t) => eval(t)))),
-			new ModMenu.MenuButton('Clear Enimies', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Tower-Defense/Clear-Enemies.js").then((res) => res.text().then((t) => eval(t)))),
-		]),
-		new ModMenu.MenuTree('Tower of Doom', [
-			new ModMenu.MenuButton('Add Coins', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Tower-Of-Doom/Add-Coins.js").then((res) => res.text().then((t) => eval(t)))),
-			new ModMenu.MenuButton('Max Out Stats', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Tower-Of-Doom/Max-Out-Stats.js").then((res) => res.text().then((t) => eval(t)))),
-			new ModMenu.MenuButton('Lower All Enemy Stats', () => fetch("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Tower-Of-Doom/Lower-All-Enemy-Stats.js").then((res) => res.text().then((t) => eval(t)))),
-		]),
-	]));
-})(); 
+async function runScript(path) {
+  eval(
+    await (
+      await fetch(
+        "https://raw.githubusercontent.com/glixzzy/blooket-hack/main/" + path
+      )
+    ).text()
+  );
+}
+blooketUtility.api.gui.glixzzy = {
+  title: "Glixzzy",
+  ...[
+    {
+      title: "Battle Royale",
+      ...[
+        {
+          isButton: true,
+          title: "Auto Answer",
+          onClick: () => runScript("battle-royale/autoAnswer.js"),
+        },
+      ],
+    },
+    {
+      title: "Blook Rush",
+      ...[
+        {
+          isButton: true,
+          title: "Set Blooks",
+          onClick: () => runScript("blook-rush/setBlooks.js"),
+        },
+        {
+          isButton: true,
+          title: "Set Defense",
+          onClick: () => runScript("blook-rush/setDefense.js"),
+        },
+      ],
+    },
+    {
+      title: "Cafe",
+      ...[
+        {
+          isButton: true,
+          title: "Get Coins",
+          onClick: () => runScript("cafe/getCoins.js"),
+        },
+        {
+          isButton: true,
+          title: "Infinite Food Level",
+          onClick: () => runScript("cafe/infiniteFoodLevel.js"),
+        },
+        {
+          isButton: true,
+          title: "Stock Infinite Food",
+          onClick: () => runScript("cafe/stockInfiniteFood.js"),
+        },
+      ],
+    },
+    {
+      title: "Classic",
+      ...[
+        {
+          isButton: true,
+          title: "Auto Answer",
+          onClick: () => runScript("classic/autoAnswer.js"),
+        },
+      ],
+    },
+    {
+      title: "Crazy Kingdom",
+      ...[
+        {
+          isButton: true,
+          title: "Choice ESP",
+          onClick: () => runScript("crazy-kingdom/choiceESP.js"),
+        },
+        {
+          isButton: true,
+          title: "Max Resources",
+          onClick: () => runScript("crazy-kingdom/maxResources.js"),
+        },
+        {
+          isButton: true,
+          title: "No Taxes",
+          onClick: () => runScript("crazy-kingdom/noTaxes.js"),
+        },
+        {
+          isButton: true,
+          title: "Set Guests",
+          onClick: () => runScript("crazy-kingdom/setGuests.js"),
+        },
+        {
+          isButton: true,
+          title: "Skip Guests",
+          onClick: () => runScript("crazy-kingdom/skipGuests.js"),
+        },
+      ],
+    },
+    {
+      title: "Crypto",
+      ...[
+        {
+          isButton: true,
+          title: "Get Crypto",
+          onClick: () => runScript("crypto/getCrypto.js"),
+        },
+        {
+          isButton: true,
+          title: "Get Other Users Password",
+          onClick: () => runScript("crypto/getOtherUsersPassword.js"),
+        },
+      ],
+    },
+    {
+      title: "Factory",
+      ...[
+        {
+          isButton: true,
+          title: "Get Cash",
+          onClick: () => runScript("factory/getCash.js"),
+        },
+        {
+          isButton: true,
+          title: "Get Mega Bot",
+          onClick: () => runScript("factory/getMegaBot.js"),
+        },
+      ],
+    },
+    {
+      title: "Fishing Frenzy",
+      ...[
+        {
+          isButton: true,
+          title: "Set Weight",
+          onClick: () => runScript("fishing-frenzy/setWeight.js"),
+        },
+      ],
+    },
+    {
+      title: "Global",
+      ...[
+        {
+          isButton: true,
+          title: "Add Tokens",
+          onClick: () => runScript("global/addTokens.js"),
+        },
+        {
+          isButton: true,
+          title: "Get All Blooks In Game",
+          onClick: () => runScript("global/getAllBlooksInGame.js"),
+        },
+        {
+          isButton: true,
+          title: "Get Every Answer Correct",
+          onClick: () => runScript("global/getEveryAnswerCorrect.js"),
+        },
+        {
+          isButton: true,
+          title: "Sell Dupe Blooks",
+          onClick: () => runScript("global/sellDupeBlooks.js"),
+        },
+        {
+          isButton: true,
+          title: "Spam Open Boxes",
+          onClick: () => runScript("global/spamOpenBoxes.js"),
+        },
+      ],
+    },
+    {
+      title: "Gold",
+      ...[
+        {
+          isButton: true,
+          title: "Chest ESP",
+          onClick: () => runScript("gold/chestESP.js"),
+        },
+        {
+          isButton: true,
+          title: "Get Gold",
+          onClick: () => runScript("gold/getGold.js"),
+        },
+      ],
+    },
+    {
+      title: "Racing",
+      ...[
+        {
+          isButton: true,
+          title: "Instant Win",
+          onClick: () => runScript("racing/instantWin.js"),
+        },
+      ],
+    },
+    {
+      title: "Tower of Doom",
+      ...[
+        {
+          isButton: true,
+          title: "Add Coins",
+          onClick: () => runScript("tower-of-doom/addCoins.js"),
+        },
+        {
+          isButton: true,
+          title: "Lower All Enemy Stats",
+          onClick: () => runScript("tower-of-doom/lowerAllEnemyStats.js"),
+        },
+        {
+          isButton: true,
+          title: "Lower Enemy Charisma",
+          onClick: () => runScript("tower-of-doom/lowerEnemyCharisma.js"),
+        },
+        {
+          isButton: true,
+          title: "Lower Enemy Strength",
+          onClick: () => runScript("tower-of-doom/lowerEnemyStrength.js"),
+        },
+        {
+          isButton: true,
+          title: "Lower Enemy Wisdom",
+          onClick: () => runScript("tower-of-doom/lowerEnemyWisdom.js"),
+        },
+        {
+          isButton: true,
+          title: "Max Out Stats",
+          onClick: () => runScript("tower-of-doom/maxOutStats.js"),
+        },
+      ],
+    },
+  ],
+};
