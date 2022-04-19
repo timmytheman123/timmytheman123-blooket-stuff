@@ -1,6 +1,6 @@
 # blooket stuffs
-this is for blooket codes that i either made or edited
+This is for blooket codes that I either made or edited (mostly edited)
           
-features: blooket utility glixzzy scripts :not done: 
+Features: Blooket Utility Glixzzy Scripts :not done: 
       
-updates:                                                                                                                                                   i got the blooket utility to load but none of the scripts load into the gui
+Updates:                                                                                                                                                   I got the blooket utility to load but none of the scripts load into the gui
