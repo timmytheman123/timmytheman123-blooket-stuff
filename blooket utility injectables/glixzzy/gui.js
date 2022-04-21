@@ -1,12 +1,4 @@
-async function runScript(path) {
-  eval(
-    await (
-      await fetch(
-        "https://raw.githubusercontent.com/glixzzy/blooket-hack/main/" + path
-      )
-    ).text()
-  );
-}
+alert("hello")
 blooketUtility.api.gui.glixzzy = {
   title: "Glixzzy",
   ...[
