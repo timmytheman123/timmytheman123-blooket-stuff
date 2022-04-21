@@ -1,3 +1,12 @@
+async function runScript(path) {
+  eval(
+    await (
+      await fetch(
+        "https://raw.githubusercontent.com/glixzzy/blooket-hack/main/" + path
+      )
+    ).text()
+  );
+}
 blooketUtility.api.gui.glixzzy = {
   title: "Glixzzy",
   ...[
@@ -153,11 +162,6 @@ blooketUtility.api.gui.glixzzy = {
           isButton: true,
           title: "Spam Open Boxes",
           onClick: () => runScript("global/spamOpenBoxes.js"),
-        },
-        {
-          isButton: true,
-          title: "Credits",
-          onClick: () => runScript("Alert("Thank lol_jude for the glixzzy archive!")"),
         },
       ],
     },
