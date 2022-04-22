@@ -2,7 +2,7 @@
 	"title": "Glixzzy Scripts v2",
 	"description": "Add Glixzzy's scripts to the GUI.",
 	"author": "Timmytheman123",
-	"url": "https://timmytheman123.github.io/timmytheman123-blooket-stuff/blooket%20utility%20injectables/glixzzy/glixzzy%20injectable.json",
+	"url": "https://raw.githubusercontent.com/timmytheman123/timmytheman123-blooket-stuff/main/blooket%20utility%20injectables/glixzzy/glixzzy%20injectable.json",
 	"scripts": [
 		"https://timmytheman123.github.io/timmytheman123-blooket-stuff/blooket%20utility%20injectables/glixzzy/gui.js"
 	]
