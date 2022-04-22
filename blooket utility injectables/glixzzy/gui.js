@@ -183,7 +183,7 @@ blooketUtility.api.gui.glixzzy = {
         {
           isButton: true,
           title: "Spam Open Boxes",
-          onClick: () => runScript("global/spamOpenBoxes.js"),
+          object.onclick = function(){alert("hello")};
         },
       ],
     },
