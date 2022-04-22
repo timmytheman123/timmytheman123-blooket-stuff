@@ -30,7 +30,7 @@ async function runScript(path) {
   );
 }
 blooketUtility.api.gui.glixzzy = {
-  title: "Schoolcheats.net",
+  title: "Glixzzy",
   ...[
     {
       title: "Battle Royale",
