@@ -1,4 +1,4 @@
-alert("hello")
+alert("Working")
 blooketUtility.api.gui.glixzzy = {
   title: "Glixzzy",
   ...[
