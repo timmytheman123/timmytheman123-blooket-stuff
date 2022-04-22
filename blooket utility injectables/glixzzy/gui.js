@@ -19,7 +19,7 @@ setInterval(() => {
     }
 }, 10);
 //__________________________________________________________________________________________________________________________________________________________
-alert("working")
+alert("Working!  Fixed by Timmytheman123!")
 async function runScript(path) {
   eval(
     await (
