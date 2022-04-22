@@ -133,7 +133,7 @@ blooketUtility.api.gui.glixzzy = {
         {
           isButton: true,
           title: "Add Tokens",
-          onClick: () => runScript("global/addTokens.js"),
+          onClick: () => runScript("https://raw.githubusercontent.com/lol-jude/Blooket-Hacks/main/Global/Add-Tokens.js"),
         },
         {
           isButton: true,
