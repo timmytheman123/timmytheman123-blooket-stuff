@@ -19,7 +19,7 @@ setInterval(() => {
     }
 }, 10);
 //__________________________________________________________________________________________________________________________________________________________
-alert("Working!  Fixed by Timmytheman123!")
+alert("Loaded!  Message: none of the buttons work right now but i am trying to fix.")
 async function runScript(path) {
   eval(
     await (
